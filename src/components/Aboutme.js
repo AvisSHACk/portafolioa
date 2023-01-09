@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 const AboutMe = ({index}) => {
     return ( 
-        <AboutmeContent hidden={index !== 0}>
+        <AboutmeContent hidden={index !== 1}>
                 <Left className="left">
                     <h3>Quien Soy</h3>
                     <p>

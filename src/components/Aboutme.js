@@ -12,7 +12,7 @@ const AboutMe = ({index}) => {
                 </Left>
 
                 <div className="right">
-                    <Cv href="/">Descargar CV</Cv>
+                    <Cv href="https://drive.google.com/file/d/1stSF4NayszDg_Mluiyd49jnAWB0BvSIh/view?usp=share_link" target="_blank">Revisar CV</Cv>
                 </div>
             </AboutmeContent>
      );
@@ -54,7 +54,6 @@ const Cv = styled.a`
     color: #fff;
     text-decoration: none;
     margin: auto;
-    
     @media screen and (min-width: 900px){
         margin: 0;
         width: 150px;

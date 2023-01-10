@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import styled from "styled-components";
+import Alerta from "./Alerta";
 
 const Contacto = ({index}) => {
     const form = useRef();
@@ -8,12 +9,35 @@ const Contacto = ({index}) => {
     const [apellidos, setApellidos] = useState();
     const [correo, setCorreo] = useState();
     const [mensaje, setMensaje] = useState();
-
+    const [estadoAlerta, cambiarEstadoAlerta] = useState(false);
+    const [alerta, cambiarAlerta] = useState({});
+    console.log(alerta);
     const enviar = (e) => {
         e.preventDefault();
+        cambiarEstadoAlerta(false);
+        cambiarEstadoAlerta(true);
+        cambiarAlerta({
+            tipo: 'exito',
+            mensaje: "Enviando"
+          });
         emailjs.sendForm('service_y8v8e7c', 'template_soo6e7h', form.current, 'yVNkR7zhi44nL8Vny').then(res => {
-            console.log("formulario enviado");
-            console.log(res);
+
+            if(res.text === 'OK') {
+                cambiarAlerta({
+                    tipo: 'exito',
+                    mensaje: "Mensaje enviado, en poco tiempo me comunicaré contigo"
+                  });
+            } else {
+                cambiarAlerta({
+                    tipo: 'Error',
+                    mensaje: "Ha ocurrido un error, intentalo denuevo mas tarde"
+                  });
+            }
+
+            setNombre('');
+            setApellidos('');
+            setCorreo('');
+            setMensaje('');
         });
     }
     return ( 
@@ -26,6 +50,7 @@ const Contacto = ({index}) => {
                     value={nombre}
                     onChange={(e) => setNombre(e.value)}
                     placeholder="Nombres"
+                    required
                 />
 
                 <Input 
@@ -34,6 +59,7 @@ const Contacto = ({index}) => {
                     value={apellidos}
                     onChange={(e) => setApellidos(e.value)}
                     placeholder="Apellidos"
+                    required
                 />
 
                 <Input 
@@ -42,6 +68,7 @@ const Contacto = ({index}) => {
                     value={correo}
                     onChange={(e) => setCorreo(e.value)}
                     placeholder="Correo"
+                    required
                 />
 
                 <Input 
@@ -53,10 +80,17 @@ const Contacto = ({index}) => {
                     placeholder="Mensaje"
                     rows="10" 
                     cols="50"
+                    required
                 ></Input>
 
                 <Button as="button">Enviar</Button>
             </Formulario>
+            <Alerta 
+                tipo={alerta.tipo}
+                mensaje={alerta.mensaje}
+                estadoAlerta={estadoAlerta}
+                cambiarEstadoAlerta={cambiarEstadoAlerta}
+            />
         </ContactoContenedor>
      );
 }

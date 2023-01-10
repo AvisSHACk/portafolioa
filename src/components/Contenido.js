@@ -29,8 +29,9 @@ const Main = styled.main`
     webkit-box-shadow: -1px 4px 5px -1px rgba(0,0,0,0.51);
     -moz-box-shadow: -1px 4px 5px -1px rgba(0,0,0,0.51);
     box-shadow: -1px 4px 5px -1px rgba(0,0,0,0.51);
-
     margin-top:4.2rem;
+    border-radius: 4px;
+    overflow: hidden;
 `
 
 const TabHeading = styled.div`

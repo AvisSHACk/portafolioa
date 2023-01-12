@@ -8,8 +8,12 @@ const Header = () => {
                 <Nombre className='Header__name'>Anthony Victor Serquén Sevilla</Nombre>
                 <Profession className='Header__h3'>Ing° Tecnico de software</Profession>
                 <ButtonsContainer>
-                    <Button href="https://github.com/avisshack" target="_blank" github>Github</Button>
-                    <Button href="https://www.linkedin.com/in/anthony-serqu%C3%A9n/" target="_blank" linkedin>Linkedin</Button>
+                    <Button href="https://github.com/avisshack" target="_blank" github>
+                        Github
+                    </Button>
+                    <Button href="https://www.linkedin.com/in/anthony-serqu%C3%A9n/" target="_blank" linkedin>
+                        Linkedin
+                    </Button>
                 </ButtonsContainer>
             </HeaderInfo>
         </HeaderContainer>

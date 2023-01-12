@@ -5,16 +5,31 @@ import Contacto from "./Contacto";
 import Habilidades from "./Habilidades";
 import Portafolio from "./portafolio";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faFolder, faGear, faUser } from '@fortawesome/free-solid-svg-icons'
+
 const Contenido = () => {
     const [index, setIndex] = useState(1);
     return ( 
         <Main>
             <TabHeading>
                 <ContainerItem>
-                    <TabItem onClick={() => setIndex(1)} activo={index === 1}>Sobre mi</TabItem>
-                    <TabItem onClick={() => setIndex(2)} activo={index === 2}>Habilidades</TabItem>
-                    <TabItem onClick={() => setIndex(3)} activo={index === 3}>Portafolio</TabItem>
-                    <TabItem onClick={() => setIndex(4)} activo={index === 4}>Contacto</TabItem>
+                    <TabItem onClick={() => setIndex(1)} activo={index === 1}>
+                        <FontAwesomeIcon icon={faUser}/>
+                        Sobre mi
+                    </TabItem>
+                    <TabItem onClick={() => setIndex(2)} activo={index === 2}>
+                    <FontAwesomeIcon icon={faGear}/>
+                        Habilidades
+                    </TabItem>
+                    <TabItem onClick={() => setIndex(3)} activo={index === 3}>
+                    <FontAwesomeIcon icon={faFolder}/>
+                        Portafolio
+                    </TabItem>
+                    <TabItem onClick={() => setIndex(4)} activo={index === 4}>
+                    <FontAwesomeIcon icon={faEnvelope}/>
+                        Contacto
+                    </TabItem>
                 </ContainerItem>
             </TabHeading>
             <AboutMe index={index}/>
@@ -32,6 +47,7 @@ const Main = styled.main`
     margin-top:4.2rem;
     border-radius: 4px;
     overflow: hidden;
+    margin-bottom: 4rem;
 `
 
 const TabHeading = styled.div`
@@ -56,6 +72,10 @@ const TabItem = styled.div`
     padding-top: 1rem;
     padding-bottom: 1rem;
     cursor: pointer;
+
+    &:hover {
+        background-color: #262626;
+    }
     
 `
  

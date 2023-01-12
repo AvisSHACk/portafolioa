@@ -5,27 +5,18 @@ const Portafolio = ({index}) => {
             <Titulo>Portafolio</Titulo>
             <PortafolioContenedor>
                 <Proyecto>
-                    <a href="/">
+                    <a href="https://app-anime-b2601.firebaseapp.com" target="_blank" rel="noreferrer">
                         <img src="img/portafolio1.png" alt="" />
                         <Mask>
                             <TituloProyecto>TheAnimeDatabase</TituloProyecto>
                             {/* <ContenedorTec> */}
                                 <Tec>REACT</Tec>
                                 <Tec>fIREBASE</Tec>
-                            {/* </ContenedorTec> */}
-                        </Mask>
-                    </a>
-                </Proyecto>
-                <Proyecto>
-                    <a href="/">
-                        <img src="img/portafolio2.png" alt="" />
-                        <Mask>
-                            <TituloProyecto>HimeTV</TituloProyecto>
-                            {/* <ContenedorTec> */}
-                                <Tec>HTML</Tec>
-                                <Tec>CSS</Tec>
-                                <Tec>JS</Tec>
-                                <Tec>PHP</Tec>
+                                {/* <DatosAdicionales>
+                                    Datos de ingreso
+                                    <p>correo: correo@correo.com</p>
+                                    <p>contraseña: naruto96</p>
+                                </DatosAdicionales> */}
                             {/* </ContenedorTec> */}
                         </Mask>
                     </a>
@@ -35,44 +26,6 @@ const Portafolio = ({index}) => {
                         <img src="img/portafolio3.png" alt="" />
                         <Mask>
                             <TituloProyecto>App Lista de tareas</TituloProyecto>
-                            {/* <ContenedorTec> */}
-                                <Tec>REACT</Tec>
-                                <Tec>FIREBASE</Tec>
-                            {/* </ContenedorTec> */}
-                        </Mask>
-                    </a>
-                </Proyecto>
-                <Proyecto>
-                    <a href="/">
-                        <img src="img/portafolio3.png" alt="" />
-                        <Mask>
-                            <TituloProyecto>App Lista de tareas</TituloProyecto>
-                            {/* <ContenedorTec> */}
-                                <Tec>REACT</Tec>
-                                <Tec>FIREBASE</Tec>
-                            {/* </ContenedorTec> */}
-                        </Mask>
-                    </a>
-                </Proyecto>
-                <Proyecto>
-                    <a href="/">
-                        <img src="img/portafolio2.png" alt="" />
-                        <Mask>
-                            <TituloProyecto>HimeTV</TituloProyecto>
-                            {/* <ContenedorTec> */}
-                                <Tec>HTML</Tec>
-                                <Tec>CSS</Tec>
-                                <Tec>JS</Tec>
-                                <Tec>PHP</Tec>
-                            {/* </ContenedorTec> */}
-                        </Mask>
-                    </a>
-                </Proyecto>
-                <Proyecto>
-                    <a href="/">
-                        <img src="img/portafolio1.png" alt="" />
-                        <Mask>
-                            <TituloProyecto>TheAnimeDatabase</TituloProyecto>
                             {/* <ContenedorTec> */}
                                 <Tec>REACT</Tec>
                                 <Tec>FIREBASE</Tec>
@@ -92,6 +45,13 @@ const Titulo = styled.h3`
 
 const PortafolioCntent = styled.div`
     padding:2.9rem 2.8rem;
+    @media screen and (min-width: 400px){
+        padding:2.9rem 5rem;
+    }
+
+    @media screen and (min-width: 600px){
+        padding:2.9rem 2.8rem;
+    }
 `
 
 const PortafolioContenedor = styled.div`
@@ -99,14 +59,14 @@ const PortafolioContenedor = styled.div`
     display: grid;
     gap: 1.2rem 0;
 
-    @media screen and (min-width: 400px){
+    @media screen and (min-width: 600px){
         grid-template-columns: repeat(2, 1fr);
         gap: 1.2rem 2.2rem;
     }
 
-    @media screen and (min-width: 700px){
+    /* @media screen and (min-width: 700px){
         grid-template-columns: repeat(3, 1fr);
-    }
+    } */
 `
 
 
@@ -147,6 +107,15 @@ const Tec = styled.span`
     margin-right: .5rem;
     border-radius: 4px;
     font-size:1.4rem;
+    margin-bottom: .4rem;
 `
+
+// const DatosAdicionales = styled.div`
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     font-size: 1.6rem;
+// `
  
 export default Portafolio;

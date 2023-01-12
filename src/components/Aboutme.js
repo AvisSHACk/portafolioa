@@ -3,11 +3,15 @@ const AboutMe = ({index}) => {
     return ( 
         <AboutmeContent hidden={index !== 1}>
                 <Left className="left">
-                    <h3>Quien Soy</h3>
+                    <Titulo>Quien Soy</Titulo>
                     <p>
-                    Hola, soy recientemente egresado en la carrera técnica de Ingeniería de Software con IA en ETI SENATi, actualmente tengo 24 años y estoy buscando mi primer empleo, tengo experiencia en la I.E. Santa Magdalena sofia Barat ubicada en la ciudad de Chiclayo/Lambayeque donde desarrolle una biblioteca virtual para uso de todas las personas relacionadas a la institución.
+                    Hola, soy recientemente egresado en la carrera técnica de Ingeniería de Software con IA en ETI SENATi, actualmente tengo 24 años.
+                    <br/>
+                    <br/>
+                    Tengo experiencia en la I.E. Santa Magdalena sofia Barat ubicada en la ciudad de Chiclayo/Lambayeque donde participe en el desarrollo de una biblioteca virtual.
+                    <br/>
+                    <br/>
                     Me considero bastante responsable, competente y siempre estoy tratando de dar lo mejor de mí en cualquier reto que se me proponga.
-                    Tengo conocimientos en HTML, CSS, SASS, JAVASCRIPT, REACTJS, FIREBASE, PHP, MYSQL, GIT, GITHUB, FIGMA, Gulp.
                     </p>
                 </Left>
 
@@ -43,6 +47,11 @@ const Left = styled.div`
     }
 `;
 
+const Titulo = styled.h3`
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+`
+
 const Cv = styled.a`
     display: block;
     width: 100px;
@@ -53,13 +62,15 @@ const Cv = styled.a`
     border-radius: 50%;
     color: #fff;
     text-decoration: none;
-    margin: auto;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
     @media screen and (min-width: 900px){
         margin: 0;
         width: 150px;
         height: 150px;
         line-height: 150px;
-        margin-right: 10rem;
+        margin-right: 8rem;
     }
 `
  

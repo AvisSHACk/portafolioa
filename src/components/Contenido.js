@@ -69,9 +69,10 @@ const TabItem = styled.div`
     text-align: center;
     background-color: ${({ activo }) => activo ? '#262626' : '#4A4A4A'} ;
     color:#fff;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     cursor: pointer;
+    border-bottom: 4px solid ${({ activo }) => activo ? '#0077B5' : '#262626'} ;
 
     &:hover {
         background-color: #262626;

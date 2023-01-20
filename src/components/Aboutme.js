@@ -4,15 +4,15 @@ const AboutMe = ({index}) => {
         <AboutmeContent hidden={index !== 1}>
                 <Left className="left">
                     <Titulo>Quien Soy</Titulo>
-                    <p>
-                    Hola, soy recientemente egresado en la carrera técnica de Ingeniería de Software con IA en ETI SENATi, actualmente tengo 24 años.
-                    <br/>
-                    <br/>
-                    Tengo experiencia en la I.E. Santa Magdalena sofia Barat ubicada en la ciudad de Chiclayo/Lambayeque donde participe en el desarrollo de una biblioteca virtual.
-                    <br/>
-                    <br/>
-                    Me considero bastante responsable, competente y siempre estoy tratando de dar lo mejor de mí en cualquier reto que se me proponga.
-                    </p>
+                    <Descripcion>
+                        Hola, soy recientemente egresado en la carrera técnica de Ingeniería de Software con IA en ETI SENATi, actualmente tengo 24 años.
+                        <br/>
+                        <br/>
+                        Tengo experiencia en la I.E. Santa Magdalena sofia Barat ubicada en la ciudad de Chiclayo/Lambayeque donde participe en el desarrollo de una biblioteca virtual.
+                        <br/>
+                        <br/>
+                        Me considero bastante responsable, competente y siempre estoy tratando de dar lo mejor de mí en cualquier reto que se me proponga.
+                    </Descripcion>
                 </Left>
 
                 <div className="right">
@@ -50,6 +50,10 @@ const Left = styled.div`
 const Titulo = styled.h3`
     margin-bottom: 1rem;
     font-size: 2.5rem;
+`
+
+const Descripcion = styled.p`
+    line-height: 1.4;
 `
 
 const Cv = styled.a`

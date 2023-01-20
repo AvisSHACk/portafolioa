@@ -17,6 +17,7 @@ function App() {
       <Helmet>
           <meta charSet="utf-8" />
           <title>Anthony Serquén | Portafolio Web 2023</title>
+          <link rel="icon" href="img/favicon.ico" />
       </Helmet>
       <Header/>
       <Contenido/>

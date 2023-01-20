@@ -5,7 +5,7 @@ const Portafolio = ({index}) => {
             <Titulo>Portafolio</Titulo>
             <PortafolioContenedor>
                 <Proyecto>
-                    <a href="https://app-anime-b2601.firebaseapp.com" target="_blank" rel="noreferrer">
+                    <Linker href="https://app-anime-b2601.firebaseapp.com" target="_blank" rel="noreferrer">
                         <img src="img/portafolio1.png" alt="" />
                         <Mask>
                             <TituloProyecto>TheAnimeDatabase</TituloProyecto>
@@ -19,19 +19,32 @@ const Portafolio = ({index}) => {
                                 </DatosAdicionales> */}
                             {/* </ContenedorTec> */}
                         </Mask>
-                    </a>
+                    </Linker>
+                    <DatosAdicionales>
+                        <h4>Datos de ingreso:</h4> 
+                        <p><b>Correo:</b> correo@correo</p>
+                        <p><b>Contraseña:</b> naruto96</p>
+                    </DatosAdicionales>
                 </Proyecto>
                 <Proyecto>
-                    <a href="/">
-                        <img src="img/portafolio3.png" alt="" />
+                    <Linker href="http://bibliotecasofia.byethost10.com/login" rel="noreferrer" target="_blank">
+                        <img src="img/portafolio4.png" alt="" />
                         <Mask>
-                            <TituloProyecto>App Lista de tareas</TituloProyecto>
+                            <TituloProyecto>Biblioteca virtual</TituloProyecto>
                             {/* <ContenedorTec> */}
-                                <Tec>REACT</Tec>
-                                <Tec>FIREBASE</Tec>
+                                <Tec>HTML</Tec>
+                                <Tec>CSS</Tec>
+                                <Tec>JS</Tec>
                             {/* </ContenedorTec> */}
+                                <Tec>PHP</Tec>
+                                <Tec>MySql</Tec>
                         </Mask>
-                    </a>
+                    </Linker>
+                    <DatosAdicionales>
+                        <h4>Datos de ingreso:</h4> 
+                        <p><b>Correo:</b> admin@iesofia.edu.pe</p>
+                        <p><b>Contraseña:</b> 1234</p>
+                    </DatosAdicionales>
                 </Proyecto>
             </PortafolioContenedor>
         </PortafolioCntent>
@@ -64,7 +77,7 @@ const PortafolioContenedor = styled.div`
         gap: 1.2rem 2.2rem;
     }
 
-    /* @media screen and (min-width: 700px){
+    /* @media screen and (min-width: 800px){
         grid-template-columns: repeat(3, 1fr);
     } */
 `
@@ -87,6 +100,9 @@ const Mask = styled.div`
 `
 
 const Proyecto = styled.article`
+`
+
+const Linker = styled.a`
     position: relative;
 
     &:hover ${Mask} {
@@ -110,12 +126,13 @@ const Tec = styled.span`
     margin-bottom: .4rem;
 `
 
-// const DatosAdicionales = styled.div`
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     font-size: 1.6rem;
-// `
+const DatosAdicionales = styled.div`
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-size: 1.6rem;
+`
  
 export default Portafolio;

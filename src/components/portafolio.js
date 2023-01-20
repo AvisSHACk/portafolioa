@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import DatosAdicionales from "./elements/DatosAdicionales";
 const Portafolio = ({index}) => {
     return ( 
         <PortafolioCntent hidden={index !== 3}>
@@ -9,42 +10,25 @@ const Portafolio = ({index}) => {
                         <img src="img/portafolio1.png" alt="" />
                         <Mask>
                             <TituloProyecto>TheAnimeDatabase</TituloProyecto>
-                            {/* <ContenedorTec> */}
-                                <Tec>REACT</Tec>
-                                <Tec>fIREBASE</Tec>
-                                {/* <DatosAdicionales>
-                                    Datos de ingreso
-                                    <p>correo: correo@correo.com</p>
-                                    <p>contraseña: naruto96</p>
-                                </DatosAdicionales> */}
-                            {/* </ContenedorTec> */}
+                            <Tec>REACT</Tec>
+                            <Tec>fIREBASE</Tec>
                         </Mask>
                     </Linker>
-                    <DatosAdicionales>
-                        <h4>Datos de ingreso:</h4> 
-                        <p><b>Correo:</b> correo@correo</p>
-                        <p><b>Contraseña:</b> naruto96</p>
-                    </DatosAdicionales>
+                    <DatosAdicionales correo={'correo@correo'} contraseña={'naruto96'}/>
                 </Proyecto>
                 <Proyecto>
                     <Linker href="http://bibliotecasofia.byethost10.com/login" rel="noreferrer" target="_blank">
                         <img src="img/portafolio4.png" alt="" />
                         <Mask>
                             <TituloProyecto>Biblioteca virtual</TituloProyecto>
-                            {/* <ContenedorTec> */}
-                                <Tec>HTML</Tec>
-                                <Tec>CSS</Tec>
-                                <Tec>JS</Tec>
-                            {/* </ContenedorTec> */}
-                                <Tec>PHP</Tec>
-                                <Tec>MySql</Tec>
+                            <Tec>HTML</Tec>
+                            <Tec>CSS</Tec>
+                            <Tec>JS</Tec>
+                            <Tec>PHP</Tec>
+                            <Tec>MySql</Tec>
                         </Mask>
                     </Linker>
-                    <DatosAdicionales>
-                        <h4>Datos de ingreso:</h4> 
-                        <p><b>Correo:</b> admin@iesofia.edu.pe</p>
-                        <p><b>Contraseña:</b> 1234</p>
-                    </DatosAdicionales>
+                    <DatosAdicionales correo={'admin@iesofia.edu.pe'} contraseña={'1234'}/>
                 </Proyecto>
             </PortafolioContenedor>
         </PortafolioCntent>
@@ -126,13 +110,6 @@ const Tec = styled.span`
     margin-bottom: .4rem;
 `
 
-const DatosAdicionales = styled.div`
-    margin-top: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    font-size: 1.6rem;
-`
+
  
 export default Portafolio;

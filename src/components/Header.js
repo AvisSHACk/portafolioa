@@ -5,7 +5,7 @@ const Header = () => {
         <HeaderContainer className='Header'>
             <Profile src="img/profile.png" alt="" />
             <HeaderInfo className="Header__info">
-                <Nombre className='Header__name'>Anthony Victor Serquén Sevilla</Nombre>
+                <Nombre className='Header__name'>Hola, soy Anthony Serquén</Nombre>
                 <Profession className='Header__h3'>Ing° Tecnico de software</Profession>
                 <ButtonsContainer>
                     <Button href="https://github.com/avisshack" target="_blank" github>
@@ -25,7 +25,7 @@ const HeaderContainer = styled.header`
     flex-direction: column;
     align-items: center;
 
-    @media screen and (min-width: 400px){
+    @media screen and (min-width: 600px){
         width: 100%;
         justify-content: center;
         flex-direction: row;
@@ -33,10 +33,6 @@ const HeaderContainer = styled.header`
 `;
 
 const HeaderInfo = styled.div`
-
-    @media screen and (min-width: 400px){
-        margin-left: 2rem;
-    }
 
     @media screen and (min-width: 600px){
         margin-left: 3.5rem;
@@ -58,7 +54,7 @@ const Nombre = styled.h1`
     text-align: center;
     margin-top: .8rem;
     margin-bottom: .8rem;
-    @media screen and (min-width: 400px){
+    @media screen and (min-width: 600px){
         text-align: left;
         margin-top: 0;
     }
@@ -70,7 +66,7 @@ const Profession = styled.h3`
     color: #797979;
     margin-bottom: .8rem;
 
-    @media screen and (min-width: 400px){
+    @media screen and (min-width: 600px){
         text-align: left;
     }
 `
@@ -97,7 +93,7 @@ const ButtonsContainer = styled.div`
     display: flex;
     justify-content: center;
 
-    @media screen and (min-width: 400px){
+    @media screen and (min-width: 600px){
         justify-content: flex-start;
     }
 `

@@ -1,56 +1,93 @@
 import styled from "styled-components";
+import TitleSection from "./elements/TitleSection";
 
-const Habilidades = ({index}) => {
+const Habilidades = () => {
     return ( 
-        <HabilidadesContent hidden={index !== 2}>
-            <Titulo>Habilidades</Titulo>
+        <HabilidadesContent>
+            <TitleSection contenido="Habilidades"/>
             <HabilidadesContenedor>
-                <Habilidad title="HTML">
-                    <img src="img/html-5.png" alt="" />
+                <Habilidad>
+                    <Imagen title="HTML">
+                        <img src="img/html-5.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>HTML</HabilidadName>
                 </Habilidad>
 
-                <Habilidad title="CSS">
-                    <img src="img/css-3.png" alt="" />
+                <Habilidad>
+                    <Imagen title="CSS">
+                        <img src="img/css-3.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>CSS</HabilidadName>
+                </Habilidad>
+                
+                <Habilidad>
+                    <Imagen title="Javascript">
+                        <img src="img/java-script.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>Javascript</HabilidadName>
                 </Habilidad>
 
-                <Habilidad title="Javascript">
-                    <img src="img/java-script.png" alt="" />
+                <Habilidad>
+                    <Imagen title="SASS">
+                        <img src="img/sass.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>SASS</HabilidadName>
+                </Habilidad>
+                
+                <Habilidad>
+                    <Imagen title="Reactjs">
+                        <img src="img/physics.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>ReactJS</HabilidadName>
                 </Habilidad>
 
-                <Habilidad title="SASS">
-                    <img src="img/sass.png" alt="" />
+                <Habilidad>
+                    <Imagen title="PHP">
+                        <img src="img/php.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>PHP</HabilidadName>
                 </Habilidad>
 
-                <Habilidad title="Reactjs">
-                    <img src="img/physics.png" alt="" />
+                <Habilidad>
+                    <Imagen title="Firebase">
+                        <img src="img/firebase.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>Firebase</HabilidadName>
                 </Habilidad>
-
-                <Habilidad title="PHP">
-                    <img src="img/php.png" alt="" />
+                
+                <Habilidad>
+                    <Imagen title="MySql">
+                        <img src="img/mysql.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>MySql</HabilidadName>
                 </Habilidad>
-
-                <Habilidad title="Firebase">
-                    <img src="img/firebase.png" alt="" />
+                
+                <Habilidad>
+                    <Imagen title="Github">
+                        <img src="img/github.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>Github</HabilidadName>
                 </Habilidad>
-
-                <Habilidad title="MySql">
-                    <img src="img/mysql.png" alt="" />
+                
+                <Habilidad>
+                    <Imagen title="Figma">
+                        <img src="img/figma.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>Figma</HabilidadName>
                 </Habilidad>
-
-                <Habilidad title="Github">
-                    <img src="img/github.png" alt="" />
+                
+                <Habilidad>
+                    <Imagen title="Gulp">
+                        <img src="img/descarga.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>Gulp</HabilidadName>
                 </Habilidad>
-
-                <Habilidad title="Figma">
-                    <img src="img/figma.png" alt="" />
-                </Habilidad>
-
-                <Habilidad title="Gulp">
-                    <img src="img/descarga.png" alt="" />
-                </Habilidad>
-
-                <Habilidad title="Git">
-                    <img src="img/git.png" alt="" />
+                
+                <Habilidad>
+                    <Imagen title="Git">
+                        <img src="img/git.png" alt="" />
+                    </Imagen>
+                    <HabilidadName>Gulp</HabilidadName>
                 </Habilidad>
             </HabilidadesContenedor>
         </HabilidadesContent>
@@ -58,19 +95,25 @@ const Habilidades = ({index}) => {
 }
 
 const HabilidadesContent = styled.div`
-    padding: 2.9rem 4.6rem;
-`
-
-const Titulo = styled.h3`
-    text-align: center;
-    font-size: 24px;
+    position: relative;
+    margin-bottom: 6rem;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 1.40rem;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #333333;
+        opacity: .4;
+    }
 `
 
 const HabilidadesContenedor = styled.div`
     margin-top: 2.2rem;
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); */
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 3.3rem 1.8rem ;
 
     @media screen and (min-width: 450px){
@@ -86,7 +129,7 @@ const HabilidadesContenedor = styled.div`
     }
 `
 
-const Habilidad = styled.div`
+const Imagen = styled.div`
     background-color: #EDEDED;
     border-radius: 50%;
     padding:1.5rem;
@@ -98,5 +141,19 @@ const Habilidad = styled.div`
     @media screen and (min-width: 800px){
         padding:2.2rem;
     }
+`
+
+const Habilidad = styled.div`
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const HabilidadName = styled.div`
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 700;
+    margin-top: 1rem;
+    opacity: .7;
 `
 export default Habilidades;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import DatosAdicionales from "./elements/DatosAdicionales";
-const Portafolio = ({index}) => {
+import TitleSection from "./elements/TitleSection";
+const Portafolio = () => {
     return ( 
-        <PortafolioCntent hidden={index !== 3}>
-            <Titulo>Portafolio</Titulo>
+        <PortafolioCntent>
+            <TitleSection contenido="Portafolio"/>
             <PortafolioContenedor>
                 <Proyecto>
                     <Linker href="https://app-anime-b2601.firebaseapp.com" target="_blank" rel="noreferrer">
@@ -35,20 +36,29 @@ const Portafolio = ({index}) => {
      );
 }
 
-const Titulo = styled.h3`
-    text-align: center;
-    font-size: 24px;
-`
+
 
 const PortafolioCntent = styled.div`
-    padding:2.9rem 2.8rem;
-    @media screen and (min-width: 400px){
+    position: relative;
+    margin-bottom: 6rem;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 1.40rem;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #333333;
+        opacity: .4;
+    }
+
+    /* @media screen and (min-width: 400px){
         padding:2.9rem 5rem;
     }
 
     @media screen and (min-width: 600px){
         padding:2.9rem 2.8rem;
-    }
+    } */
 `
 
 const PortafolioContenedor = styled.div`

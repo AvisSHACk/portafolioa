@@ -2,8 +2,11 @@
 import { Helmet } from 'react-helmet';
 import WebFont from 'webfontloader';
 import './App.css';
-import Contenido from './components/Contenido';
+import AboutMe from './components/Aboutme';
 import Header from "./components/Header";
+import Contacto from "./components/Contacto";
+import Habilidades from "./components/Habilidades";
+import Portafolio from "./components/portafolio";
 
 WebFont.load({
   google: {
@@ -20,7 +23,11 @@ function App() {
           <link rel="icon" href="img/favicon.ico" />
       </Helmet>
       <Header/>
-      <Contenido/>
+      {/* <Contenido/> */}
+      <AboutMe/>
+      <Habilidades/>
+      <Portafolio/>
+      <Contacto/>
     </div>
   );
 }

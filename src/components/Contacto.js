@@ -2,8 +2,9 @@ import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 import Alerta from "./Alerta";
+import TitleSection from "./elements/TitleSection";
 
-const Contacto = ({index}) => {
+const Contacto = () => {
     const form = useRef();
     const [nombre, setNombre] = useState();
     const [apellidos, setApellidos] = useState();
@@ -41,8 +42,9 @@ const Contacto = ({index}) => {
         });
     }
     return ( 
-        <ContactoContenedor hidden={index !== 4}>
-            <Titulo>Contacto</Titulo>
+        // <ContactoContenedor hidden={index !== 4}></ContactoContenedor>
+        <ContactoContenedor>
+            <TitleSection contenido="Contacto"/>
             <Formulario ref={form} onSubmit={enviar}>
                 <Input 
                     type="text" 
@@ -96,16 +98,18 @@ const Contacto = ({index}) => {
 }
 
 const ContactoContenedor = styled.div`
-    padding:2.9rem 2.8rem;
-
-    @media screen and (min-width: 700px){
-        padding:2.8rem 18rem;
+    position: relative;
+    margin-bottom: 6rem;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 1.40rem;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #333333;
+        opacity: .4;
     }
-`
-
-const Titulo = styled.h3`
-    text-align: center;
-    font-size: 24px;
 `
 
 const Formulario = styled.form`

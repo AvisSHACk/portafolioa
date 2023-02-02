@@ -87,7 +87,7 @@ const Habilidades = () => {
                     <Imagen title="Git">
                         <img src="img/git.png" alt="" />
                     </Imagen>
-                    <HabilidadName>Gulp</HabilidadName>
+                    <HabilidadName>Git</HabilidadName>
                 </Habilidad>
             </HabilidadesContenedor>
         </HabilidadesContent>

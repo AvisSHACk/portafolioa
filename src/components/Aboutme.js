@@ -8,7 +8,7 @@ const AboutMe = () => {
                 Hola, soy recientemente egresado en la carrera técnica de Ingeniería de Software con IA en ETI SENATi.
                 <br/>
                 <br/>
-                Tengo experiencia de practicas en la I.E. Santa Magdalena sofia Barat ubicada en la ciudad de Chiclayo/Lambayeque donde participe en el desarrollo de una biblioteca virtual.
+                Tengo experiencia en la I.E. Santa Magdalena sofia Barat ubicada en la ciudad de Chiclayo/Lambayeque donde participé en el desarrollo de una biblioteca virtual.
                 <br/>
                 <br/>
                 Me considero bastante responsable, competente y siempre estoy tratando de dar lo mejor de mí en cualquier reto que se me proponga.

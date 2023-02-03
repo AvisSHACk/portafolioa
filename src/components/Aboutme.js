@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 import TitleSection from "./elements/TitleSection";
 const AboutMe = () => {
     return ( 
-        <AboutmeContent>
+        <AboutmeContent as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <TitleSection contenido="Sobre mi"/>
             <Descripcion>
                 Hola, soy recientemente egresado en la carrera técnica de Ingeniería de Software con IA en ETI SENATi.
@@ -18,7 +19,7 @@ const AboutMe = () => {
      );
 }
 
-const AboutmeContent = styled.div`
+const AboutmeContent = styled(motion.div)`
     margin: 6rem 0;
     display: flex;
     flex-direction: column;

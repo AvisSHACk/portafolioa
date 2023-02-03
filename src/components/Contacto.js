@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 import Alerta from "./Alerta";
 import TitleSection from "./elements/TitleSection";
+import { motion } from "framer-motion";
 
 const Contacto = () => {
     const form = useRef();
@@ -12,7 +13,6 @@ const Contacto = () => {
     const [mensaje, setMensaje] = useState();
     const [estadoAlerta, cambiarEstadoAlerta] = useState(false);
     const [alerta, cambiarAlerta] = useState({});
-    console.log(alerta);
     const enviar = (e) => {
         e.preventDefault();
         cambiarEstadoAlerta(false);
@@ -43,7 +43,7 @@ const Contacto = () => {
     }
     return ( 
         // <ContactoContenedor hidden={index !== 4}></ContactoContenedor>
-        <ContactoContenedor>
+        <ContactoContenedor as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <TitleSection contenido="Contacto"/>
             <Formulario ref={form} onSubmit={enviar}>
                 <Input 
@@ -97,7 +97,7 @@ const Contacto = () => {
      );
 }
 
-const ContactoContenedor = styled.div`
+const ContactoContenedor = styled(motion.div)`
     position: relative;
     margin-bottom: 6rem;
     &::after {

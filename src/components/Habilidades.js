@@ -1,100 +1,87 @@
 import styled from "styled-components";
 import TitleSection from "./elements/TitleSection";
+import HabilidadElement from "./elements/Habilidad";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Habilidades = () => {
+
+    const [HabilidadesArray] = useState([
+        {
+            name: 'HTML',
+            img: 'img/html-5.png',
+        },
+
+        {
+            name: 'CSS',
+            img: 'img/css-3.png',
+        },
+
+        {
+            name: 'JavaScript',
+            img: 'img/java-script.png',
+        },
+
+        {
+            name: 'SASS',
+            img: 'img/sass.png',
+        },
+
+        {
+            name: 'ReactJS',
+            img: 'img/physics.png',
+        },
+
+        {
+            name: 'PHP',
+            img: 'img/php.png',
+        },
+        
+        {
+            name: 'Firebase',
+            img: 'img/firebase.png',
+        },
+
+        {
+            name: 'Mysql',
+            img: 'img/MySql.png',
+        },
+
+        {
+            name: 'Github',
+            img: 'img/github.png',
+        },
+
+        {
+            name: 'Figma',
+            img: 'img/figma.png',
+        },
+
+        {
+            name: 'Gulp',
+            img: 'img/descarga.png',
+        },
+
+        {
+            name: 'Git',
+            img: 'img/git.png',
+        },
+
+        
+    ]);
     return ( 
-        <HabilidadesContent>
+        <HabilidadesContent as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <TitleSection contenido="Habilidades"/>
             <HabilidadesContenedor>
-                <Habilidad>
-                    <Imagen title="HTML">
-                        <img src="img/html-5.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>HTML</HabilidadName>
-                </Habilidad>
-
-                <Habilidad>
-                    <Imagen title="CSS">
-                        <img src="img/css-3.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>CSS</HabilidadName>
-                </Habilidad>
-                
-                <Habilidad>
-                    <Imagen title="Javascript">
-                        <img src="img/java-script.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>Javascript</HabilidadName>
-                </Habilidad>
-
-                <Habilidad>
-                    <Imagen title="SASS">
-                        <img src="img/sass.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>SASS</HabilidadName>
-                </Habilidad>
-                
-                <Habilidad>
-                    <Imagen title="Reactjs">
-                        <img src="img/physics.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>ReactJS</HabilidadName>
-                </Habilidad>
-
-                <Habilidad>
-                    <Imagen title="PHP">
-                        <img src="img/php.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>PHP</HabilidadName>
-                </Habilidad>
-
-                <Habilidad>
-                    <Imagen title="Firebase">
-                        <img src="img/firebase.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>Firebase</HabilidadName>
-                </Habilidad>
-                
-                <Habilidad>
-                    <Imagen title="MySql">
-                        <img src="img/mysql.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>MySql</HabilidadName>
-                </Habilidad>
-                
-                <Habilidad>
-                    <Imagen title="Github">
-                        <img src="img/github.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>Github</HabilidadName>
-                </Habilidad>
-                
-                <Habilidad>
-                    <Imagen title="Figma">
-                        <img src="img/figma.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>Figma</HabilidadName>
-                </Habilidad>
-                
-                <Habilidad>
-                    <Imagen title="Gulp">
-                        <img src="img/descarga.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>Gulp</HabilidadName>
-                </Habilidad>
-                
-                <Habilidad>
-                    <Imagen title="Git">
-                        <img src="img/git.png" alt="" />
-                    </Imagen>
-                    <HabilidadName>Git</HabilidadName>
-                </Habilidad>
+                {HabilidadesArray.map((habilidad, i) => {
+                    return <HabilidadElement key={i} habilidad={habilidad}/>
+                })}
             </HabilidadesContenedor>
         </HabilidadesContent>
      );
 }
 
-const HabilidadesContent = styled.div`
+const HabilidadesContent = styled(motion.div)`
     position: relative;
     margin-bottom: 6rem;
     &::after {
@@ -127,33 +114,5 @@ const HabilidadesContenedor = styled.div`
     @media screen and (min-width: 800px){
         grid-template-columns: repeat(6, 1fr);
     }
-`
-
-const Imagen = styled.div`
-    background-color: #EDEDED;
-    border-radius: 50%;
-    padding:1.5rem;
-    cursor: pointer;
-    transition: transform .2s;
-    &:hover {
-        transform: scale(1.1);
-    }
-    @media screen and (min-width: 800px){
-        padding:2.2rem;
-    }
-`
-
-const Habilidad = styled.div`
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-`
-
-const HabilidadName = styled.div`
-    font-size: 1.6rem;
-    color: #000;
-    font-weight: 700;
-    margin-top: 1rem;
-    opacity: .7;
 `
 export default Habilidades;

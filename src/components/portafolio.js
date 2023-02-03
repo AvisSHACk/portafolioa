@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import DatosAdicionales from "./elements/DatosAdicionales";
 import TitleSection from "./elements/TitleSection";
 const Portafolio = () => {
     return ( 
-        <PortafolioCntent>
+        <PortafolioCntent as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <TitleSection contenido="Portafolio"/>
             <PortafolioContenedor>
                 <Proyecto>
@@ -38,7 +39,7 @@ const Portafolio = () => {
 
 
 
-const PortafolioCntent = styled.div`
+const PortafolioCntent = styled(motion.div)`
     position: relative;
     margin-bottom: 6rem;
     &::after {

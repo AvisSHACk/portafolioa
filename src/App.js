@@ -21,9 +21,10 @@ function App() {
           <meta charSet="utf-8" />
           <title>Anthony Serquén | Portafolio Web 2023</title>
           <link rel="icon" href="img/favicon.ico" />
+          <meta name="description" content="Portafolio"/>
+          <link rel="apple-touch-icon" href="img/android-chrome-512x512.png" />
       </Helmet>
       <Header/>
-      {/* <Contenido/> */}
       <AboutMe/>
       <Habilidades/>
       <Portafolio/>

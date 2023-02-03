@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
 const Header = () => {
     return ( 
-        <HeaderContainer className='Header'>
+        <HeaderContainer className='Header' as={motion.header} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <Profile src="img/profile.png" alt="" />
             <HeaderInfo className="Header__info">
                 <Nombre className='Header__name'>Hola, soy Anthony Serquén</Nombre>
@@ -20,7 +21,7 @@ const Header = () => {
      );
 }
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled(motion.header)`
     display: flex;
     flex-direction: column;
     align-items: center;

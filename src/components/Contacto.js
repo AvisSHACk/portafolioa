@@ -42,7 +42,6 @@ const Contacto = () => {
         });
     }
     return ( 
-        // <ContactoContenedor hidden={index !== 4}></ContactoContenedor>
         <ContactoContenedor as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <TitleSection contenido="Contacto"/>
             <Formulario ref={form} onSubmit={enviar}>
@@ -100,7 +99,6 @@ const Contacto = () => {
 const ContactoContenedor = styled(motion.div)`
     position: relative;
     margin-bottom: 6rem;
-    width: 70%;
     &::after {
         content: '';
         position: absolute;

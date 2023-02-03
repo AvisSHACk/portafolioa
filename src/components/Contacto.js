@@ -100,6 +100,7 @@ const Contacto = () => {
 const ContactoContenedor = styled(motion.div)`
     position: relative;
     margin-bottom: 6rem;
+    width: 70%;
     &::after {
         content: '';
         position: absolute;

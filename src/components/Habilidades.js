@@ -99,7 +99,6 @@ const HabilidadesContent = styled(motion.div)`
 const HabilidadesContenedor = styled.div`
     margin-top: 2.2rem;
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); */
     grid-template-columns: repeat(3, 1fr);
     gap: 3.3rem 1.8rem ;
 

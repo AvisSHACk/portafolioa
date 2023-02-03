@@ -37,24 +37,12 @@ const AboutmeContent = styled(motion.div)`
         background: #333333;
         opacity: .4;
     }
-
     
-    @media screen and (min-width: 900px){
-        /* padding: 3.4rem 4.4rem; */
-    }
     ${({hidden}) => hidden && css`
         display:none;
     `}
 
 `;
-
-// const Left = styled.div`
-//     text-align: center;
-//     @media screen and (min-width: 900px){
-//         width: 48%;
-//         text-align: left;
-//     }
-// `;
 
 const Descripcion = styled.p`
     line-height: 1.4;

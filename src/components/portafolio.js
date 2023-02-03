@@ -52,14 +52,6 @@ const PortafolioCntent = styled(motion.div)`
         background: #333333;
         opacity: .4;
     }
-
-    /* @media screen and (min-width: 400px){
-        padding:2.9rem 5rem;
-    }
-
-    @media screen and (min-width: 600px){
-        padding:2.9rem 2.8rem;
-    } */
 `
 
 const PortafolioContenedor = styled.div`
@@ -71,10 +63,6 @@ const PortafolioContenedor = styled.div`
         grid-template-columns: repeat(2, 1fr);
         gap: 1.2rem 2.2rem;
     }
-
-    /* @media screen and (min-width: 800px){
-        grid-template-columns: repeat(3, 1fr);
-    } */
 `
 
 

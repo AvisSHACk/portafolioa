@@ -44,7 +44,7 @@ const Habilidades = () => {
 
         {
             name: 'Mysql',
-            img: 'img/MySql.png',
+            img: 'img/mysql.png',
         },
 
         {

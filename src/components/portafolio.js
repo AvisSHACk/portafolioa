@@ -13,7 +13,7 @@ const Portafolio = () => {
                         <Mask>
                             <TituloProyecto>TheAnimeDatabase</TituloProyecto>
                             <Tec>REACT</Tec>
-                            <Tec>fIREBASE</Tec>
+                            <Tec>FIREBASE</Tec>
                         </Mask>
                     </Linker>
                     <DatosAdicionales correo={'correo@correo'} contraseña={'naruto96'}/>
@@ -31,6 +31,18 @@ const Portafolio = () => {
                         </Mask>
                     </Linker>
                     <DatosAdicionales correo={'admin@iesofia.edu.pe'} contraseña={'1234'}/>
+                </Proyecto>
+
+                <Proyecto>
+                    <Linker href="https://messenger-app-ef17b.web.app/" rel="noreferrer" target="_blank">
+                        <img src="img/portafolio5.png" alt="" />
+                        <Mask>
+                            <TituloProyecto>App Messenger</TituloProyecto>
+                            <Tec>REACT</Tec>
+                            <Tec>FIREBASE</Tec>
+                        </Mask>
+                    </Linker>
+                    <DatosAdicionales correo={'srquen77@gmail.com'} contraseña={'123456'}/>
                 </Proyecto>
             </PortafolioContenedor>
         </PortafolioCntent>
@@ -56,12 +68,17 @@ const PortafolioCntent = styled(motion.div)`
 
 const PortafolioContenedor = styled.div`
     margin-top: 2.2rem;
-    display: grid;
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
     gap: 1.2rem 0;
 
-    @media screen and (min-width: 600px){
-        grid-template-columns: repeat(2, 1fr);
+    @media screen and (min-width: 400px){
+        /* grid-template-columns: repeat(2, 1fr); */
+        flex-direction: row;
+        justify-content: center;
         gap: 1.2rem 2.2rem;
+        flex-wrap: wrap;
     }
 `
 
@@ -83,6 +100,13 @@ const Mask = styled.div`
 `
 
 const Proyecto = styled.article`
+    @media screen and (min-width: 400px){
+        width: 80%;
+    }
+
+    @media screen and (min-width: 600px){
+        width: 48%;
+    }
 `
 
 const Linker = styled.a`

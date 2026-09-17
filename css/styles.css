@@ -1,0 +1,225 @@
+  /*
+    Portafolio de Anthony Serquén — guía de estilos
+    Importa las fuentes antes de este archivo:
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+  */
+
+  :root {
+    /* Colores */
+    --color-canvas: #eef4fc;
+    --color-surface: #ffffff;
+    /*--color-surface-alt*/
+    --color-header-soft: #e2ecfa;
+    --color-border: #c4d4ec;
+    --color-border-strong: #90aad3;
+    --color-navy-900: #10275f;
+    --color-navy-700: #23458f;
+    --color-blue-600: #3568c8;
+    --color-blue-400: #79a2e8;
+    --color-blue-100: #dce9fc;
+    --color-text: #14295b;
+    --color-text-muted: #5e73a0;
+    --color-coral: #e8868f;
+    --color-success: #35a875;
+    --color-warning: #d89435;
+    --color-danger: #cb5966;
+
+    /* Colores semánticos */
+    --color-link: var(--color-blue-600);
+    --color-link-hover: #173678;
+    --color-focus: rgb(53 104 200 / 28%);
+    --color-progress-track: #dce6f4;
+    --color-tag-bg: #e8f0fc;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, #173678 0%, #3568c8 58%, #79a2e8 100%);
+    --gradient-surface: linear-gradient(180deg, #ffffff 0%, #f3f7fd 100%);
+    --gradient-hero-overlay: linear-gradient(90deg, rgb(16 39 95 / 88%) 0%, rgb(16 39 95 / 30%) 48%, transparent 72%);
+
+    /* Tipografía */
+    --font-display: "Pixelify Sans", system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", "Cascadia Code", Consolas, monospace;
+    --font-body: var(--font-mono);
+    --text-display: clamp(2.5rem, 5vw, 4.5rem);
+    --text-h1: clamp(2.25rem, 4vw, 3rem);
+    --text-h2: clamp(1.625rem, 2.5vw, 2rem);
+    --text-body: 1rem;
+    --text-small: 0.8125rem;
+    --text-meta: 0.75rem;
+    --leading-display: 0.95;
+    --leading-heading: 1.1;
+    --leading-body: 1.65;
+    --leading-small: 1.4;
+
+    /* Espaciado: escala base de 4 px */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-24: 6rem;
+
+    /* Layout */
+    --container-max: 90rem;
+    --page-padding: 1.5rem;
+    --column-left: 15.5rem;
+    --column-right: 14.75rem;
+    --column-gap: 1rem;
+    --window-bar-height: 2.125rem;
+
+    /* Bordes, radios y sombras */
+    --border-width: 1px;
+    --border-default: var(--border-width) solid var(--color-border);
+    --border-strong: var(--border-width) solid var(--color-border-strong);
+    --radius-window: 0.625rem;
+    --radius-control: 0.5rem;
+    --radius-image: 0.375rem;
+    --radius-pill: 999px;
+    --shadow-window: 0 0.375rem 1.25rem rgb(27 62 122 / 8%);
+    --shadow-window-hover: 0 0.625rem 1.75rem rgb(27 62 122 / 12%);
+
+    /* Interacción */
+    --transition-fast: 160ms ease;
+    --transition-base: 200ms ease;
+    --button-height: 2.75rem;
+    --touch-target: 2.75rem;
+  }
+
+  /*@media (max-width: 1199px) {
+    :root { --page-padding: 1.25rem; }
+  }
+
+  @media (max-width: 767px) {
+    :root { --page-padding: 1rem; --column-gap: 0.75rem; }
+  }
+
+  @media (max-width: 479px) {
+    :root { --page-padding: 0.75rem; }
+  }*/
+
+  /* Base */
+  *,
+  *::before, *::after { box-sizing: border-box; }
+
+  html { 
+    scroll-behavior: smooth; 
+  }
+
+  body {
+    margin: 0;
+    color: var(--color-text);
+    background: var(--color-canvas);
+    font: 400 var(--text-body) / var(--leading-body) var(--font-body);
+  }
+  img { 
+    display: block; 
+    max-width: 100%; 
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a { 
+    color: var(--color-link); 
+    text-decoration-thickness: 1px; 
+    text-underline-offset: 0.25rem; 
+  }
+
+  a:hover { 
+    color: var(--color-link-hover); 
+  }
+
+  :focus-visible { 
+    outline: 3px solid var(--color-focus); outline-offset: 2px; 
+  }
+
+  .Container { width: min(100% - (var(--page-padding) * 2), var(--container-max)); margin-inline: auto; }
+
+
+  .l-container {
+    width: 1400px;
+    margin: 1rem auto 1rem;
+    border: var(--border-default);
+    background: var(--color-surface);
+  }
+
+  .Header, .Hero, .Bars-menu {
+    padding: 0 .6rem;
+  }
+
+  /*Header*/
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: .6rem;
+    border-bottom: var(--border-default);
+    background: var(--color-canvas);
+  }
+
+  .Header__buttons-browser i:nth-child(1),
+  .Header__buttons-browser i:nth-child(2),
+  .Header__buttons-browser i:nth-child(3) {
+    display: inline-block;
+    --size:15px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+
+  }
+
+  .Header__buttons-browser i:nth-child(1) {
+    background: var(--color-danger);
+
+  }
+
+  .Header__buttons-browser i:nth-child(2) {
+    background: var(--color-warning);
+
+  }
+
+  .Header__buttons-browser i:nth-child(3) {
+    background: var(--color-success);
+  }
+
+  .Header__url {
+    flex: auto;
+    text-align: center;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-surface); 
+  }
+
+  .Header__url p {
+    padding: .4rem .4rem;
+  }
+
+  .Hero {
+    margin-top: .6rem;
+    height: 345px;
+  }
+
+  .Hero img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+
+  .Bars-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Menu a {
+    display:inline-block;
+    padding: 1rem 1rem;
+    font-weight: 700;
+    text-decoration: none;
+  }

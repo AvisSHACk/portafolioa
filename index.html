@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Anthony Serquén - Ing de software</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/df1d66b85d.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
   <div class="l-container">
@@ -20,7 +21,7 @@
       <div class="Header__url">
         <p>www.anthyx.com</p>
       </div>
-      <div class="Header__windowControl">
+      <div class="WindowControl">
         <span>-</span>
         <span>4</span>
         <span>x</span>
@@ -29,23 +30,109 @@
     <section class="Hero">
       <img src="img/hero/hero.webp" alt="">
     </section>
-    <section class="Bars-menu">
-      <nav class="Menu">
-        <a href="#">HOME</a>
-        <a href="#">PROJECTS</a>
-        <a href="#">BLOG</a>
-        <a href="#">ABOUT</a>
-        <a href="#">NOTES</a>
-      </nav>
+    <main class="Main">
+      <section class="Bars-menu">
+        <nav class="Menu">
+          <a href="#"><i class="fa-solid fa-house"></i>HOME</a>
+          <a href="#"><i class="fa-regular fa-rectangle-list"></i>  BLOG</a>
+        </nav>
 
-      <form action="">
-        <input type="search" name="search" id="search" placeholder="Search a Project">
-      </form>
-    </section>
-    <main>
-      <aside></aside>
-      <section></section>
-      <aside></aside>
+        <form action="">
+          <input type="search" name="search" id="search" placeholder="Search a Project">
+        </form>
+      </section>
+      <aside>
+        <section class="Window">
+          <header class="Window__header">
+            <h2 class="window__title">Profile</h2>
+            <div class="WindowControl">
+              <span>-</span>
+              <span>4</span>
+              <span>x</span>
+            </div>
+          </header>
+          <main class="Window__body">
+            <figure class="Window__media">
+              <img src="img/pj/profile.webp" alt="">
+            </figure>
+            <div class="Window__info">
+              <h2 class="Window__name">Anthony Serquén</h2>
+              <p class="Window__role">Software Engineer </br> CTO @ EYTLYR</p>
+              <p class="Window__profile-intro">Building a better internet</p>
+              <div class="Window__profile-listContainer">
+                <p class="Window__profile-list"><b>Location: </b>Perú</p>
+                <p class="Window__profile-list"><b>Pronouns: </b>he/him</p>
+                <p class="Window__profile-list"><b>Currently: </b>Building @ EYTLYR</p>
+                <p class="Window__profile-list"><b>Studyng: </b>Japanese 日本語</p>
+              </div>
+
+              <button class="Button Button--blue Window__button">MESSAGE ME</button>
+            </div>
+          </main>
+        </section>
+        <section class="Window">
+          <header class="Window__header">
+            <h2 class="window__title">Interest</h2>
+            <div class="WindowControl">
+              <span>-</span>
+              <span>4</span>
+              <span>x</span>
+            </div>
+          </header>
+          <main class="Window__body">
+          
+          </main>
+        </section>
+      </aside>
+      <section class="Window">
+        <header class="Window__header">
+          <h2 class="window__title">About me</h2>
+          <div class="WindowControl">
+            <span>-</span>
+            <span>4</span>
+            <span>x</span>
+          </div>
+        </header>
+        <main class="Window__body Window__about">
+          <p class="Window__meta">Last update: 2026 . 09 . 13 <span class="Window__online">● Online</span></p>
+
+          <img class="Window__about-img" src="img/pj/chibi.webp" alt="">
+          <h2  class="Window__about-title">こんにちは! I’m Anthony!</h2>
+          <P class="Window__about-description">I’m a software engineer and the CTO at EYTLYR. I love building useful and delightful software, exploring new technologies, and creating things that make people’s lives a little brighter.</P>
+          <P class="Window__about-description">Right now I’m diving deeper into web development, AI tools, and learning Japanese. When I’m not coding, you’ll find me at the gym, watching anime, reading, or probably with a cup of iced coffee. ☕</P>
+          <P class="Window__about-description">This is my little corner of the internet where I share my projects, things I’m learning, and things I’m proud of. Thanks for stopping by! ♡</P>
+        </main>
+      </section>
+      <aside>
+        <section class="Window">
+          <header class="Window__header">
+            <h2 class="window__title">Profile</h2>
+            <div class="WindowControl">
+              <span>-</span>
+              <span>4</span>
+              <span>x</span>
+            </div>
+          </header>
+          <main class="Window__body">
+            <figure class="Window__media">
+              <img src="img/pj/profile.webp" alt="">
+            </figure>
+            <div class="Window__info">
+              <h2 class="Window__name">Anthony Serquén</h2>
+              <p class="Window__role">Software Engineer</p>
+              <p class="Window__profile-intro">Building a better internet</p>
+              <div class="Window__profile-listContainer">
+                <p class="Window__profile-listContainer"><b>Location: </b>Perú</p>
+                <p class="Window__profile-listContainer"><b>Pronouns: </b>he/him</p>
+                <p class="Window__profile-listContainer"><b>Currently: </b>Building @ EYTLYR</p>
+                <p class="Window__profile-listContainer"><b>Studyng: </b>Japanese 日本語</p>
+              </div>
+
+              <button class="Button--contact">Message me</button>
+            </div>
+          </main>
+        </section>
+      </aside>
     </main>
     <footer></footer>
   </div>

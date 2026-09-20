@@ -22,16 +22,21 @@
         <p>www.anthyx.com</p>
       </div>
       <div class="WindowControl">
-        <span>-</span>
-        <span>4</span>
-        <span>x</span>
+        <span>&#8722;</span>
+        <span>&#9633;</span>
+        <span>&#10005;</span>
       </div>
     </header>
     <section class="Hero">
       <img src="img/hero/hero.webp" alt="">
+      <div class="Hero__shade"></div>
+      <div class="Hero__description">
+        <h1 class="Hero__title"><b>Anthony <br>Serquén</b></h1>
+        <span><b>SOFTWARE ENGINEER  ×  CTO @ EYTLYR</b></span> 
+      </div>
     </section>
     <main class="Main">
-      <section class="Bars-menu">
+      <!-- <section class="Bars-menu">
         <nav class="Menu">
           <a href="#"><i class="fa-solid fa-house"></i>HOME</a>
           <a href="#"><i class="fa-regular fa-rectangle-list"></i>  BLOG</a>
@@ -40,15 +45,15 @@
         <form action="">
           <input type="search" name="search" id="search" placeholder="Search a Project">
         </form>
-      </section>
-      <aside>
+      </section> -->
+      <aside class="Sidebar Sidebar--left">
         <section class="Window">
           <header class="Window__header">
             <h2 class="window__title">Profile</h2>
             <div class="WindowControl">
-              <span>-</span>
-              <span>4</span>
-              <span>x</span>
+              <span>&#8722;</span>
+              <span>&#9633;</span>
+              <span>&#10005;</span>
             </div>
           </header>
           <main class="Window__body">
@@ -57,7 +62,7 @@
             </figure>
             <div class="Window__info">
               <h2 class="Window__name">Anthony Serquén</h2>
-              <p class="Window__role">Software Engineer </br> CTO @ EYTLYR</p>
+              <p class="Window__role">Software Engineer </br> CTO @ <a href="https://eytlyr.com/" target="_blank">EYTLYR</a></p>
               <p class="Window__profile-intro">Building a better internet</p>
               <div class="Window__profile-listContainer">
                 <p class="Window__profile-list"><b>Location: </b>Perú</p>
@@ -66,7 +71,40 @@
                 <p class="Window__profile-list"><b>Studyng: </b>Japanese 日本語</p>
               </div>
 
-              <button class="Button Button--blue Window__button">MESSAGE ME</button>
+              <a href="mailto:srquen77@gmail.com">
+                <button class="Button Button--blue Window__button">MESSAGE ME</button>
+              </a>
+            </div>
+          </main>
+        </section>
+        <section class="Window">
+          <header class="Window__header">
+            <h2 class="window__title">Connect</h2>
+            <div class="WindowControl">
+              <span>&#8722;</span>
+              <span>&#9633;</span>
+              <span>&#10005;</span>
+            </div>
+          </header>
+          <main class="Window__body">
+            <figure class="Window__media">
+              <img src="img/pj/conect.webp" alt="">
+            </figure>
+            <div class="Window__info">
+              <ul class="Window__socials">
+                <li class="Window__social">
+                  <b><i class="fa-brands fa-github"></i>Github: </b><a href="https://github.com/AvisSHACk" target="_blank">@AvisSHACk</a>
+                </li>
+                <li class="Window__social">
+                  <b><i class="fa-brands fa-linkedin"></i>Linkedin: </b><a href="https://www.linkedin.com/in/anthonyserquen/" target="_blank">@anthonyserquen</a>
+                </li>
+                <li class="Window__social">
+                  <b><i class="fa-brands fa-square-instagram"></i>Instagram: </b><a href="https://www.instagram.com/anthony_serquen11/" target="_blank">anthonyserquen11</a>
+                </li>
+                <li class="Window__social">
+                  <b><i class="fa-solid fa-envelope"></i>Email: </b>srquen@gmail.com
+                </li>
+              </ul>
             </div>
           </main>
         </section>
@@ -74,67 +112,158 @@
           <header class="Window__header">
             <h2 class="window__title">Interest</h2>
             <div class="WindowControl">
-              <span>-</span>
-              <span>4</span>
-              <span>x</span>
+              <span>&#8722;</span>
+              <span>&#9633;</span>
+              <span>&#10005;</span>
             </div>
           </header>
           <main class="Window__body">
-          
+            <div class="Window__tags">
+              <span class="Tag">Anime</span>
+              <span class="Tag">Gym</span>
+              <span class="Tag">Japanese</span>
+              <span class="Tag">Web Development</span>
+              <span class="Tag">Tech</span>
+              <span class="Tag">UI/UX</span>
+              <span class="Tag">Music</span>
+              <span class="Tag">Cats</span>
+              <span class="Tag">Gaming</span>
+              <span class="Tag">Productivy</span>
+              <span class="Tag">Manga</span>
+              <span class="Tag">Travel</span>
+            </div>
           </main>
         </section>
       </aside>
-      <section class="Window">
-        <header class="Window__header">
-          <h2 class="window__title">About me</h2>
-          <div class="WindowControl">
-            <span>-</span>
-            <span>4</span>
-            <span>x</span>
-          </div>
-        </header>
-        <main class="Window__body Window__about">
-          <p class="Window__meta">Last update: 2026 . 09 . 13 <span class="Window__online">● Online</span></p>
-
-          <img class="Window__about-img" src="img/pj/chibi.webp" alt="">
-          <h2  class="Window__about-title">こんにちは! I’m Anthony!</h2>
-          <P class="Window__about-description">I’m a software engineer and the CTO at EYTLYR. I love building useful and delightful software, exploring new technologies, and creating things that make people’s lives a little brighter.</P>
-          <P class="Window__about-description">Right now I’m diving deeper into web development, AI tools, and learning Japanese. When I’m not coding, you’ll find me at the gym, watching anime, reading, or probably with a cup of iced coffee. ☕</P>
-          <P class="Window__about-description">This is my little corner of the internet where I share my projects, things I’m learning, and things I’m proud of. Thanks for stopping by! ♡</P>
-        </main>
-      </section>
-      <aside>
+      <section class="Content">
         <section class="Window">
           <header class="Window__header">
-            <h2 class="window__title">Profile</h2>
+            <h2 class="window__title">About me</h2>
             <div class="WindowControl">
-              <span>-</span>
-              <span>4</span>
-              <span>x</span>
+              <span>&#8722;</span>
+              <span>&#9633;</span>
+              <span>&#10005;</span>
+            </div>
+          </header>
+          <main class="Window__body Window__about">
+            <p class="Window__meta">Last update: 2026 . 09 . 13 <span class="Window__online">● Online</span></p>
+
+            <img class="Window__about-img" src="img/pj/chibi.webp" alt="">
+            <h2  class="Window__about-title">こんにちは! <br>I’m Anthony!</h2>
+            <P class="Window__about-description">I'm Anthony Serquén, a Software Engineer and CTO at EYTLYR. I enjoy building digital products, exploring new technologies, and turning ideas into functional and thoughtfully designed solutions.</P>
+            <P class="Window__about-description">I'm currently expanding my skills in web development while working on personal and collaborative projects, continuously learning more about software development, architecture, and modern tools.☕</P>
+            <P class="Window__about-description">Outside of coding, I spend my time learning Japanese, training at the gym, and enjoying anime, music, and technology. This portfolio is my little corner of the internet where I share what I'm building, what I'm learning, and my journey as a developer. ♡</P>
+          </main>
+        </section>
+
+        <section class="Window">
+          <header class="Window__header">
+            <h2 class="window__title">FEATURED PROJECTS</h2>
+            <div class="WindowControl">
+              <span>&#8722;</span>
+              <span>&#9633;</span>
+              <span>&#10005;</span>
             </div>
           </header>
           <main class="Window__body">
-            <figure class="Window__media">
-              <img src="img/pj/profile.webp" alt="">
-            </figure>
-            <div class="Window__info">
-              <h2 class="Window__name">Anthony Serquén</h2>
-              <p class="Window__role">Software Engineer</p>
-              <p class="Window__profile-intro">Building a better internet</p>
-              <div class="Window__profile-listContainer">
-                <p class="Window__profile-listContainer"><b>Location: </b>Perú</p>
-                <p class="Window__profile-listContainer"><b>Pronouns: </b>he/him</p>
-                <p class="Window__profile-listContainer"><b>Currently: </b>Building @ EYTLYR</p>
-                <p class="Window__profile-listContainer"><b>Studyng: </b>Japanese 日本語</p>
-              </div>
+            <p class="Window__meta">selected work</span></p>
+            <div class="Window__projects">
+              <article class="Project">
+                <figure class="Project__image">
+                  <img src="img/projects/1.png" alt="">
+                </figure>
+                <div class="Project__body">
+                  <h3 class="Project__title">Kizuna <span>In progress</span></h3>
+                  <p class="Project__description">A language exchange and social connection app designed to help people meet, practice languages, and connect through shared interests, personality, and compatibility.</p>
+                  <div class="Project__tags">
+                    <span class="Tag">React</span>
+                    <span class="Tag">Typescript</span>
+                    <span class="Tag">Node</span>
+                    <span class="Tag">Express</span>
+                  </div>
+                </div>
+              </article>
 
-              <button class="Button--contact">Message me</button>
+              <article class="Project">
+                <figure class="Project__image">
+                  <img src="img/projects/2.png" alt="">
+                </figure>
+                <div class="Project__body">
+                  <h3 class="Project__title">Rynva <span>In progress</span></h3>
+                  <p class="Project__description">A personal productivity app for organizing tasks, reminders, projects, and daily routines in one simple workspace.</p>
+                  <div class="Project__tags">
+                    <span class="Tag">Laravel</span>
+                    <span class="Tag">Mysql</span>
+                  </div>
+                </div>
+              </article>
             </div>
           </main>
         </section>
-      </aside>
+
+        <section class="Window">
+          <header class="Window__header">
+            <h2 class="window__title">Tech Stack</h2>
+            <div class="WindowControl">
+              <span>&#8722;</span>
+              <span>&#9633;</span>
+              <span>&#10005;</span>
+            </div>
+          </header>
+
+          <main class="Window__body Window__stacks">
+            <div class="Window__stack">
+              <img src="img/icons/html.png" alt="">
+              <p>HTML5</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/css.png" alt="">
+              <p>CSS</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/javascript.png" alt="">
+              <p>JAVASCRIPT</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/react.png" alt="">
+              <p>REACT</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/php.png" alt="">
+              <p>PHP</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/mysql.png" alt="">
+              <p>MYSQL</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/git.png" alt="">
+              <p>GIT</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/github.png" alt="">
+              <p>GITHUB</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/python.png" alt="">
+              <p>PYTHON</p>
+            </div>
+            <div class="Window__stack">
+              <img src="img/icons/firebase.png" alt="">
+              <p>FIREBASE</p>
+            </div>
+          </main>
+        </section>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="Footer">
+      <strong>Anthony Serquén</strong>
+      <span>Software Engineer x CTO @EYTLYR</span>
+  <!--     <nav class="Menu Menu--footer">
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+        </nav> -->
+    </footer>
   </div>
 </body>
 </html>
